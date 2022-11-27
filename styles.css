@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#ask-container {
+  width: 100%;
+  background-color: #ddd;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+}
+#button-container {
+  background-color: #aaa;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.app-button {
+  margin: 1rem;
+  font-size: 3rem;
+  padding: 1rem 1.5rem;
+  border-radius: 15%;
+  border: hsl(var(--hue), 50%, 50%) 3px solid;
+  box-shadow: hsl(var(--hue), 50%, 50%) 10px 10px 20px;
+  background-color: #ccc;
+  color: hsl(var(--hue), 50%, 50%);
+  font-weight: bolder;
+  text-transform: uppercase;
+  position: absolute;
+}
+.app-button:active {
+  transform: scale(0.9);
+}
+.app-button:hover {
+  background-color: hsl(var(--hue), 50%, 60%);
+  color: #fff;
+}
+#first-option {
+  position: absolute;
+  left: 15vw;
+}
+#second-option {
+  position: absolute;
+  right: 15vw;
+  display: none;
+}
+
+.response-container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #aaae;
+  transform: scale(0);
+  transition: transform 200ms;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-align: center;
+}
+.response-container.active {
+  transform: scale(1);
+}
